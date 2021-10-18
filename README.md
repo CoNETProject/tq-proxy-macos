@@ -1,4 +1,4 @@
-# TQ Proxy Server
+# TQ Proxy client MacOS
 
 ## Description 概要
 
