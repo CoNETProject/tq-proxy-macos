@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0858F3D271DA8310092B090 /* dnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0858F3C271DA8310092B090 /* dnsManager.swift */; };
+		D0858F43271DA9530092B090 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EBC6CD2719BA6E00FE52FC /* NetworkExtension.framework */; platformFilter = maccatalyst; };
+		D0858F46271DA9530092B090 /* DNSProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0858F45271DA9530092B090 /* DNSProxyProvider.swift */; };
+		D0858F48271DA9530092B090 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0858F47271DA9530092B090 /* main.swift */; };
+		D0858F4D271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = D0858F42271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0EBC6B72719B85300FE52FC /* tq_proxy_macosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC6B62719B85300FE52FC /* tq_proxy_macosApp.swift */; };
+		D0EBC6B92719B85300FE52FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC6B82719B85300FE52FC /* ContentView.swift */; };
+		D0EBC6BB2719B85300FE52FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EBC6BA2719B85300FE52FC /* Assets.xcassets */; };
+		D0EBC6BE2719B85300FE52FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EBC6BD2719B85300FE52FC /* Preview Assets.xcassets */; };
+		D0EBC6C62719B8A500FE52FC /* tunnel-manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC6C52719B8A500FE52FC /* tunnel-manager.swift */; };
+		D0EBC6CE2719BA6E00FE52FC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EBC6CD2719BA6E00FE52FC /* NetworkExtension.framework */; platformFilter = maccatalyst; };
+		D0EBC6D12719BA6E00FE52FC /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC6D02719BA6E00FE52FC /* PacketTunnelProvider.swift */; };
+		D0EBC6D62719BA6E00FE52FC /* vpn-tunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0EBC6CB2719BA6E00FE52FC /* vpn-tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0EBC6DB2719BA9200FE52FC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EBC6CD2719BA6E00FE52FC /* NetworkExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0858F4B271DA9530092B090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EBC6AB2719B85300FE52FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0858F41271DA9530092B090;
+			remoteInfo = "dns-tunnel";
+		};
+		D0EBC6D42719BA6E00FE52FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0EBC6AB2719B85300FE52FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EBC6CA2719BA6E00FE52FC;
+			remoteInfo = "vpn-tunnel";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0858F51271DA9530092B090 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				D0858F4D271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6DA2719BA6E00FE52FC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D0EBC6D62719BA6E00FE52FC /* vpn-tunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D0858F3C271DA8310092B090 /* dnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dnsManager.swift; sourceTree = "<group>"; };
+		D0858F42271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "com.kloak.tq-proxy-macos.dns-tunnel.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0858F45271DA9530092B090 /* DNSProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyProvider.swift; sourceTree = "<group>"; };
+		D0858F47271DA9530092B090 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D0858F49271DA9530092B090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0858F4A271DA9530092B090 /* dns_tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dns_tunnel.entitlements; sourceTree = "<group>"; };
+		D0EBC6B32719B85300FE52FC /* tq-proxy-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tq-proxy-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EBC6B62719B85300FE52FC /* tq_proxy_macosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tq_proxy_macosApp.swift; sourceTree = "<group>"; };
+		D0EBC6B82719B85300FE52FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0EBC6BA2719B85300FE52FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0EBC6BD2719B85300FE52FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0EBC6BF2719B85300FE52FC /* tq_proxy_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tq_proxy_macos.entitlements; sourceTree = "<group>"; };
+		D0EBC6C52719B8A500FE52FC /* tunnel-manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tunnel-manager.swift"; sourceTree = "<group>"; };
+		D0EBC6CB2719BA6E00FE52FC /* vpn-tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "vpn-tunnel.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EBC6CD2719BA6E00FE52FC /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		D0EBC6D02719BA6E00FE52FC /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		D0EBC6D22719BA6E00FE52FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EBC6D32719BA6E00FE52FC /* vpn_tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vpn_tunnel.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0858F3F271DA9530092B090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0858F43271DA9530092B090 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6B02719B85300FE52FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EBC6DB2719BA9200FE52FC /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6C82719BA6E00FE52FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EBC6CE2719BA6E00FE52FC /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0858F44271DA9530092B090 /* dns-tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				D0858F45271DA9530092B090 /* DNSProxyProvider.swift */,
+				D0858F47271DA9530092B090 /* main.swift */,
+				D0858F49271DA9530092B090 /* Info.plist */,
+				D0858F4A271DA9530092B090 /* dns_tunnel.entitlements */,
+			);
+			path = "dns-tunnel";
+			sourceTree = "<group>";
+		};
+		D0EBC6AA2719B85300FE52FC = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6B52719B85300FE52FC /* tq-proxy-macos */,
+				D0EBC6CF2719BA6E00FE52FC /* vpn-tunnel */,
+				D0858F44271DA9530092B090 /* dns-tunnel */,
+				D0EBC6CC2719BA6E00FE52FC /* Frameworks */,
+				D0EBC6B42719B85300FE52FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0EBC6B42719B85300FE52FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6B32719B85300FE52FC /* tq-proxy-macos.app */,
+				D0EBC6CB2719BA6E00FE52FC /* vpn-tunnel.appex */,
+				D0858F42271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0EBC6B52719B85300FE52FC /* tq-proxy-macos */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6B62719B85300FE52FC /* tq_proxy_macosApp.swift */,
+				D0EBC6C52719B8A500FE52FC /* tunnel-manager.swift */,
+				D0858F3C271DA8310092B090 /* dnsManager.swift */,
+				D0EBC6B82719B85300FE52FC /* ContentView.swift */,
+				D0EBC6BA2719B85300FE52FC /* Assets.xcassets */,
+				D0EBC6BF2719B85300FE52FC /* tq_proxy_macos.entitlements */,
+				D0EBC6BC2719B85300FE52FC /* Preview Content */,
+			);
+			path = "tq-proxy-macos";
+			sourceTree = "<group>";
+		};
+		D0EBC6BC2719B85300FE52FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6BD2719B85300FE52FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0EBC6CC2719BA6E00FE52FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6CD2719BA6E00FE52FC /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0EBC6CF2719BA6E00FE52FC /* vpn-tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBC6D02719BA6E00FE52FC /* PacketTunnelProvider.swift */,
+				D0EBC6D22719BA6E00FE52FC /* Info.plist */,
+				D0EBC6D32719BA6E00FE52FC /* vpn_tunnel.entitlements */,
+			);
+			path = "vpn-tunnel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0858F41271DA9530092B090 /* dns-tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0858F4E271DA9530092B090 /* Build configuration list for PBXNativeTarget "dns-tunnel" */;
+			buildPhases = (
+				D0858F3E271DA9530092B090 /* Sources */,
+				D0858F3F271DA9530092B090 /* Frameworks */,
+				D0858F40271DA9530092B090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dns-tunnel";
+			productName = "dns-tunnel";
+			productReference = D0858F42271DA9530092B090 /* com.kloak.tq-proxy-macos.dns-tunnel.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+		D0EBC6B22719B85300FE52FC /* tq-proxy-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EBC6C22719B85300FE52FC /* Build configuration list for PBXNativeTarget "tq-proxy-macos" */;
+			buildPhases = (
+				D0EBC6AF2719B85300FE52FC /* Sources */,
+				D0EBC6B02719B85300FE52FC /* Frameworks */,
+				D0EBC6B12719B85300FE52FC /* Resources */,
+				D0EBC6DA2719BA6E00FE52FC /* Embed App Extensions */,
+				D0858F51271DA9530092B090 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0EBC6D52719BA6E00FE52FC /* PBXTargetDependency */,
+				D0858F4C271DA9530092B090 /* PBXTargetDependency */,
+			);
+			name = "tq-proxy-macos";
+			productName = "tq-proxy-macos";
+			productReference = D0EBC6B32719B85300FE52FC /* tq-proxy-macos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0EBC6CA2719BA6E00FE52FC /* vpn-tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0EBC6D72719BA6E00FE52FC /* Build configuration list for PBXNativeTarget "vpn-tunnel" */;
+			buildPhases = (
+				D0EBC6C72719BA6E00FE52FC /* Sources */,
+				D0EBC6C82719BA6E00FE52FC /* Frameworks */,
+				D0EBC6C92719BA6E00FE52FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vpn-tunnel";
+			productName = "vpn-tunnel";
+			productReference = D0EBC6CB2719BA6E00FE52FC /* vpn-tunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0EBC6AB2719B85300FE52FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					D0858F41271DA9530092B090 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					D0EBC6B22719B85300FE52FC = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					D0EBC6CA2719BA6E00FE52FC = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = D0EBC6AE2719B85300FE52FC /* Build configuration list for PBXProject "tq-proxy-macos" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0EBC6AA2719B85300FE52FC;
+			productRefGroup = D0EBC6B42719B85300FE52FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0EBC6B22719B85300FE52FC /* tq-proxy-macos */,
+				D0EBC6CA2719BA6E00FE52FC /* vpn-tunnel */,
+				D0858F41271DA9530092B090 /* dns-tunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0858F40271DA9530092B090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6B12719B85300FE52FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EBC6BE2719B85300FE52FC /* Preview Assets.xcassets in Resources */,
+				D0EBC6BB2719B85300FE52FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6C92719BA6E00FE52FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0858F3E271DA9530092B090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0858F48271DA9530092B090 /* main.swift in Sources */,
+				D0858F46271DA9530092B090 /* DNSProxyProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6AF2719B85300FE52FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EBC6B92719B85300FE52FC /* ContentView.swift in Sources */,
+				D0EBC6C62719B8A500FE52FC /* tunnel-manager.swift in Sources */,
+				D0EBC6B72719B85300FE52FC /* tq_proxy_macosApp.swift in Sources */,
+				D0858F3D271DA8310092B090 /* dnsManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EBC6C72719BA6E00FE52FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EBC6D12719BA6E00FE52FC /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0858F4C271DA9530092B090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0858F41271DA9530092B090 /* dns-tunnel */;
+			targetProxy = D0858F4B271DA9530092B090 /* PBXContainerItemProxy */;
+		};
+		D0EBC6D52719BA6E00FE52FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0EBC6CA2719BA6E00FE52FC /* vpn-tunnel */;
+			targetProxy = D0EBC6D42719BA6E00FE52FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D0858F4F271DA9530092B090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "dns-tunnel/dns_tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "dns-tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "dns-tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos.dns-tunnel";
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D0858F50271DA9530092B090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "dns-tunnel/dns_tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "dns-tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "dns-tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos.dns-tunnel";
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D0EBC6C02719B85300FE52FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0EBC6C12719B85300FE52FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D0EBC6C32719B85300FE52FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tq-proxy-macos/tq_proxy_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tq-proxy-macos/Preview Content\"";
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D0EBC6C42719B85300FE52FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tq-proxy-macos/tq_proxy_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tq-proxy-macos/Preview Content\"";
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D0EBC6D82719BA6E00FE52FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "vpn-tunnel/vpn_tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "vpn-tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "vpn-tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos.vpn-tunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D0EBC6D92719BA6E00FE52FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "vpn-tunnel/vpn_tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7YV9RB5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "vpn-tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "vpn-tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kloak.tq-proxy-macos.vpn-tunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0858F4E271DA9530092B090 /* Build configuration list for PBXNativeTarget "dns-tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0858F4F271DA9530092B090 /* Debug */,
+				D0858F50271DA9530092B090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EBC6AE2719B85300FE52FC /* Build configuration list for PBXProject "tq-proxy-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EBC6C02719B85300FE52FC /* Debug */,
+				D0EBC6C12719B85300FE52FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EBC6C22719B85300FE52FC /* Build configuration list for PBXNativeTarget "tq-proxy-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EBC6C32719B85300FE52FC /* Debug */,
+				D0EBC6C42719B85300FE52FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0EBC6D72719BA6E00FE52FC /* Build configuration list for PBXNativeTarget "vpn-tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0EBC6D82719BA6E00FE52FC /* Debug */,
+				D0EBC6D92719BA6E00FE52FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0EBC6AB2719B85300FE52FC /* Project object */;
+}
